@@ -1,0 +1,277 @@
+:root {
+    --Soft red: hsl(7, 99%, 70%);
+    --Yellow: hsl(51, 100%, 49%);
+    --Dark desaturated cyan: hsl(167, 40%, 24%);
+    --Dark blue: hsl(198, 62%, 26%);
+    --Dark moderate cyan: hsl(168, 34%, 41%);
+    --Very dark desaturated blue: hsl(212, 27%, 19%);
+    --Very dark grayish blue: hsl(213, 9%, 39%);
+    --Dark grayish blue: hsl(232, 10%, 55%);
+    --Grayish blue: hsl(210, 4%, 67%);
+    --White: hsl(0, 0%, 100%);
+    font-family: 'Barlow', sans-serif;
+    font-family: 'Fraunces', serif;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+}
+/*---------------Header-----------------------*/
+.headerContainer {
+    background-image: url(images/mobile/image-header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+}
+.logo {
+    margin: 30px 0 0 20px;
+    width: 130px;
+    height: 35px;
+}
+.headerContainer h1 {
+    margin: 120px 0 0 0;
+    color: var(--White);
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+    letter-spacing: 4px;
+    display: block;
+    max-width: 100%;
+}
+/*----------------------------Media Queries*---------------------------*/
+@media (max-width: 767px) {
+    .displayList {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+    .headerContainer {
+        background-image: url(images/desktop/image-header.jpg);
+    }
+    .navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+    }
+    .displayList li {
+    display: inline-block;
+    list-style: none;
+    font-family: 'Barlow', sans-serif;
+    padding: 5px 20px;
+
+    }
+    .displayList a {
+        text-decoration: none;
+        color: white;
+    }
+    .logo {
+        margin: 30px 30px;
+    }
+    .bttn {
+        font-family: 'Fraunces', serif;
+        font-size: 2rem;
+        padding: 10px 25px;
+        background: white;
+        border: none;
+        border-radius: 50px;
+        color: hsl(244, 73%, 12%);
+        cursor: pointer;
+    }
+}
+/*--------------First Section---------------*/
+.firstContainerText {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.firstContainerText h2 {
+    margin: 4rem 0 0 0;
+    font-family: 'Fraunces', serif;
+    color: hsl(244, 73%, 12%);
+    font-size: 2.3rem;
+    font-weight: 900;
+}
+.firstContainerText p {
+    color: hsl(232, 10%, 55%);
+    font-size: 1.2rem;
+    font-family: 'Barlow', sans-serif;
+    margin: 25px 20px;
+    line-height: 1.5;
+}
+.learnBttnOne:visited {
+    color: hsl(244, 73%, 12%);
+    font-family: 'Fraunces', serif;
+    font-size: 1.1rem;
+    font-weight: 900;
+    display: inline-block;
+    cursor: pointer;
+}
+.learnBttnOne::after {
+    position: relative;
+    z-index: -1;
+    display: block;
+    content: "";
+    width: 34%;
+    height: .6rem;
+    border-radius: 1rem;
+    opacity: 0.3;
+    right: -33%;
+    transform: translateY(-80%);
+    background-color: #fad400;
+}
+.desktopImage {
+    display: none;
+}
+@media (min-width: 768px) {
+    .firstContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .firstContainerText {
+       min-width: 50%;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       text-align: left;
+    }
+    .firstContainer h2 {
+        text-align: left;
+        font-size: 3.3rem;
+        width: 45%;
+    }
+    .firstContainerText p {
+        text-align: left;
+        font-size: 1.6rem;
+        width: 45%;
+    }
+    .mobileImage {
+        display: none;
+    }
+    .desktopImage{
+        display: block;
+    }
+}
+/*---------------Section Two----------------*/
+.redCupPhoto {
+    margin-top: 50px;
+}
+.bttnTwo::after {
+    background-color: #fe7867;
+}
+/*---------------Section Three-------------*/
+.overlapImage {
+    position: relative;
+    margin: 5rem 0 0 0;
+    min-width: 100vw;
+}
+.overlapText {
+    position: absolute;
+    top: 0%;
+    overflow: hidden;
+}
+.overlapText h2{
+    color: hsl(244, 75%, 7%);
+    padding-top: 23rem;
+    opacity: .7;
+}
+.overlapText p{
+    color: hsl(244, 75%, 7%);
+    opacity: .7;
+}
+/*------------Section Four-----------------*/
+
+.overlapImageTwo {
+    position: relative;
+    margin-top: -2%;
+    min-width: 100vw;
+}
+
+/*-------------Section Five----------------*/
+.clientHeader {
+    color: hsl(210, 4%, 67%);
+    font-size: 1.1rem;
+    text-align: center;
+    margin-top: 3.5rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 3px;
+}
+.clientTestimonials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.clientPhotos {
+    margin: 3rem 0;
+    border-radius: 100px;
+}
+.clientTestimonials p {
+    font-family: 'Barlow', sans-serif;
+    color: hsl(213, 9%, 39%);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 0 1.1rem;
+    max-width: 500px;
+}
+.clientName {
+    color: hsl(212, 27%, 19%);
+    font-size: 1.25rem;
+    margin: 1.5rem 0 .6rem 0;
+    font-weight: 900;
+}
+.clientTitle {
+    font-family: 'Barlow', sans-serif;
+    color: hsl(210, 4%, 67%);
+    font-size: .93rem;
+}
+.marginBttom {
+    margin-bottom: 6rem;
+}
+/*------------Section Six----------------*/
+.pictureSquare {
+    display: flex;
+    width: 50%;
+}
+/*------------Last Section--------------*/
+.footerSection {
+    background-color: hsl(168, 70%, 70%);
+    text-align: center;
+    height: 40%;
+}
+.footerLogo {
+    margin: 4rem 0 2rem 0;
+}
+.footerSection ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footerSection li {
+    list-style: none;
+    margin: 0 1.7rem;
+}
+.footerSection a {
+    text-decoration: none;
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.2rem;
+    color: hsl(168, 34%, 41%);
+}
+.icons {
+    margin: 2.7rem 0 2rem 0;
+    padding: 0 1rem;
+}
+/* ------------Desktop Images--------------- */
